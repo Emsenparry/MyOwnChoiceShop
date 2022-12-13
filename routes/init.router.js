@@ -2,7 +2,7 @@ import express from 'express'
 import sequelize from '../config/sequelize.config.js'
 const InitRouter = express.Router()
 
-import ProductModel from '../models/product.model.js'
+// import SizeModel from '../models/size.model.js'
 
 InitRouter.get('/init', (req, res) => {
     try {
