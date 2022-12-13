@@ -7,6 +7,7 @@ import GenderRouter from './routes/gender.router.js'
 import SizeRouter from './routes/size.router.js'
 import TypeRouter from './routes/type.router.js'
 import BrandRouter from './routes/brand.router.js'
+import UserRouter from './routes/user.router.js'
 
 
 const app = express();
@@ -28,6 +29,7 @@ app.use(GenderRouter)
 app.use(SizeRouter)
 app.use(TypeRouter)
 app.use(BrandRouter)
+app.use(UserRouter)
 
 
 app.listen(3000, () => {
