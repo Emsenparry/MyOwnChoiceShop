@@ -8,6 +8,8 @@ import SizeRouter from './routes/size.router.js'
 import TypeRouter from './routes/type.router.js'
 import BrandRouter from './routes/brand.router.js'
 import UserRouter from './routes/user.router.js'
+import ReviewRouter from './routes/review.router.js'
+// import ProductRouter from './routes/product.router.js'
 
 
 const app = express();
@@ -30,6 +32,8 @@ app.use(SizeRouter)
 app.use(TypeRouter)
 app.use(BrandRouter)
 app.use(UserRouter)
+app.use(ReviewRouter)
+// app.use(ProductRouter)
 
 
 app.listen(3000, () => {
