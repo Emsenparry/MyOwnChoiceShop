@@ -5,8 +5,7 @@ class UserController {
         let { limit, attributes } = req.query
         limit = parseInt(limit) || 1000
         const attr = attributes ? attributes.split(',') : new Array
-        ('id', 'username', 'password', 'firstname', 'lastname', 
-        'email', 'address', 'zipcode', 'city', 'phone_nr')
+        ('id', 'username', 'password')
 
 
         const result = await UserModel.findAll({
