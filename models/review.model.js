@@ -29,6 +29,10 @@ ReviewModel.init({
     rating: {
         type: DataTypes.INTEGER,
         allowNull: false
+    },
+    product_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 }, {
     sequelize, 

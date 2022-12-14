@@ -38,15 +38,15 @@ ProductModel.init({
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    review_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
     type_id: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    size_id: {
+    size: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    price: {
         type: DataTypes.INTEGER,
         allowNull: false
     }

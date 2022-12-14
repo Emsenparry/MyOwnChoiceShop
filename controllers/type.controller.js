@@ -1,4 +1,8 @@
 import TypeModel from '../models/type.model.js'
+import ProductModel from '../models/product.model.js'
+
+TypeModel.hasMany(ProductModel)
+ProductModel.belongsTo(TypeModel)
 
 class TypeController {
     list = async (req, res) => {

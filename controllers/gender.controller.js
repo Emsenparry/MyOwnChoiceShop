@@ -1,4 +1,8 @@
 import GenderModel from '../models/gender.model.js'
+import ProductModel from '../models/product.model.js'
+
+GenderModel.hasMany(ProductModel)
+ProductModel.belongsTo(GenderModel)
 
 class GenderController {
     list = async (req, res) => {

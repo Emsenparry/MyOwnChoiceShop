@@ -1,4 +1,9 @@
 import BrandModel from '../models/brand.model.js'
+import ProductModel from '../models/product.model.js'
+
+BrandModel.hasMany(ProductModel)
+ProductModel.belongsTo(BrandModel)
+
 
 class BrandController {
     list = async (req, res) => {
