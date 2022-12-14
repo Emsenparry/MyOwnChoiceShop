@@ -1,5 +1,4 @@
 import ReviewModel from '../models/review.model.js'
-
 // Import the model you want a relationship to
 import UserModel from '../models/user.model.js'
 // JOINING THE TABLES
