@@ -9,6 +9,7 @@ import BrandRouter from './routes/brand.router.js'
 import UserRouter from './routes/user.router.js'
 import ReviewRouter from './routes/review.router.js'
 import ProductRouter from './routes/product.router.js'
+import { router as AuthRouter } from './routes/authenticate.router.js'
 
 
 const app = express();
@@ -32,6 +33,7 @@ app.use(BrandRouter)
 app.use(UserRouter)
 app.use(ReviewRouter)
 app.use(ProductRouter)
+app.use(AuthRouter)
 
 
 app.listen(3000, () => {
