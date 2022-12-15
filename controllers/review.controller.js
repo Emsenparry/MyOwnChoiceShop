@@ -23,15 +23,15 @@ class ReviewController {
 details = async (req, res) => {
     const { id } = req.params || 0
     const result = await ReviewModel.findOne({
-        attributes: ['id', 'date', 'rating', 'title', 'content', 'user_id'],
+        attributes: ['id', 'date', 'user_id', 'comment', 'title', 'rating', 'product_id'],
         where: { id: id }
     })
     res.json(result)
 }
 
 create = async (req, res) => {
-    const { date, rating, title, content, user_id } = req.body;
-    if( date && rating && title && content && user_id) {
+    const { date, user_id, comment, title, rating, product_id } = req.body;
+    if(date && user_id && comment && title && rating && product_id) {
         const model = await ReviewModel.create(req.body)
         res.json({ newId: model.id })
     } else {
@@ -41,9 +41,9 @@ create = async (req, res) => {
 
 update = async (req, res) => {
     const { id } = req.params || 0
-    const { date, rating, title, content, user_id } = req.body;
+    const { date, user_id, comment, title, rating, product_id } = req.body;
 
-    if(id && date && rating && title && content && user_id) {
+    if(id && date && user_id && comment && title && rating && product_id) {
         const model = await ReviewModel.update(req.body, {
             where: { id: id }
         })

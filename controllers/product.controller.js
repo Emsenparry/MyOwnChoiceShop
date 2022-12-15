@@ -10,7 +10,7 @@ class ProductController {
         let { limit, attributes } = req.query
         limit = parseInt(limit) || 1000
         const attr = attributes ? attributes.split(',') : new Array
-        ('img', 'name', 'content')
+        ('id', 'img', 'name', 'content')
 
 
         const result = await ProductModel.findAll({
@@ -53,7 +53,7 @@ update = async (req, res) => {
             where: { id: id }
         })
         res.json({
-            msg: 'Review updated'
+            msg: 'Product updated'
         })
     } else {
         res.sendStatus(418)
