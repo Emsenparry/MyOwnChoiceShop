@@ -1,0 +1,29 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<!-- <link rel="stylesheet" href="asset/css/style.css"> -->
+
+<script>
+     function toBase64(arr) {
+   return btoa(
+      arr.reduce((data, byte) => data + String.fromCharCode(byte), '')
+   );
+}
+    $.get("/product", function(data, status){
+ 
+ data.forEach(element => {
+
+    $("#products-container").append(`
+    <div class="product">
+     <section class="cards">
+     <img src="${element.img}" alt="image" border="0"/>
+         <p>${element.name}</p>
+         <p>${element.content}</p>
+        </section>
+         </div>  
+    `
+)  
+ });
+ });
+</script>
+</div>

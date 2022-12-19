@@ -8,6 +8,7 @@ class AuthenticateController {
 
 	login = async (req, res) => {
 		const { username, password } = req.body
+		console.log(username);
 		if(username && password) {
 			const userdata = await UserModel.findOne({
 				attributes: ['id','password'],

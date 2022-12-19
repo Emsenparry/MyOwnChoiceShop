@@ -1,0 +1,42 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<h1>Register</h1>
+<form class="register" action="/register" method ="post">
+<div>
+     <leble for = "name">Name</leble>
+     <input type ="text" id = "name" name = "name" required>
+</div>
+<div>
+     <leble for = "email">Email</leble>
+     <input type ="email" id = "email" name = "email" required>
+</div>
+<div>
+     <leble for = "password">Password</leble>
+     <input type ="password" id = "password" name = "password" required> 
+</div>
+<button type="submit" id="register">Register</button>
+</form>
+<a href ="/login">login</a>
+
+
+<script>
+     const handelRegister = (email, password) => {
+          let data={
+               username:"test", password:"test", firstname:"test", lastname:"test", 
+               email:"test", address:"test", zipcode:"test", city:"test", phone_nr:"test"
+          }
+          $.post("http://localhost:3000/user", data,
+         function(data,status){
+           alert("Data: " + data + "\nStatus: " + status);
+         });
+     
+     }
+     $("#register").click(()=>{
+          let email= $("#email").val()
+          let password= $("#password").val()
+          console.log(1234);
+        handelRegister(email, password)
+     })
+     </script>
