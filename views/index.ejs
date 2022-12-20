@@ -1,32 +1,39 @@
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-</head>
-<link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="assets/js/home.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<script>
-     function toBase64(arr) {
-   return btoa(
-      arr.reduce((data, byte) => data + String.fromCharCode(byte), '')
-   );
-}
-    $.get("/product", function(data, status){
- 
- data.forEach(element => {
 
-    $("#products-container").append(`
-    <div class="product">
-
-        <img src="${element.img}" alt="image" border="0"/>
-     <div class="cards">
-        <p class="name">${element.name}</p>
-        <p class="content">${element.content}</p>
-        <p class="price">${element.price}</p>
-        <button class="button">Add to Cart</button>
+  <body>
+    <header class="header" id="header">
+      <nav class="navbar">
+        <div class="logo-container">
+          <h1>Spirit Smell</h1>
         </div>
-         </div>  
-    `
-)  
- });
- });
-</script>
-</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="products" class="productWrapper"></section>
+    </main>
+  </body>
+</html>

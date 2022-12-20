@@ -1,41 +1,14 @@
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-</head>
+<h1>Login</h1>
 
-<h1>login</h1>
-<form action="/login" method ="post">
 
-<div>
-     <leble for="email">Email</leble>
-     <input type="text" id="email"  name="email">
-     
-</div>
-<div>
-     <leble for="password">Password</leble>
-     <input type="password" id="password" name="password">
-     
-</div>
-<button type="submit" id="login">login</button>
+<form action="http://localhost:3000/login" method="POST">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required />
+  </div>
+  <button type="submit" id="login">Login</button>
 </form>
-<a href ="/register">Register</a>
-
-
-<script>
-const handelAuthentication = (email, password) => {
-     $.post("http://localhost:3000/signin",
-    {
-     username: email,
-     password: password
-    },
-    function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-} 
-$(document).ready(()=>{
-     $("#login").click(()=>{
-     let email= $("#email").val()
-     let password= $("#password").val()
-   handelAuthentication(email, password)
-})
-})
-</script>
+<a href="/register">Register</a>

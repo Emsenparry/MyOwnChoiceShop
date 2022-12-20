@@ -19,7 +19,7 @@ class ProductController {
         })
         result.forEach(element =>{
             let img = new Buffer.from(element.img).toString('utf8')
-            element.img=img
+            element.img = img
            })
         console.log(result);
         res.json(result)
