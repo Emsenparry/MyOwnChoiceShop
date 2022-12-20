@@ -1,9 +1,15 @@
 import express from 'express'
 import ProductController from '../controllers/product.controller.js'
 
+// express.Router() -> Creates a const which calls the router method
 const ProductRouter = express.Router()
 const controller = new ProductController
 
+//GET - LIST
+/**
+ * Calls method GET with an endpoints which afterwards calls the (req and) res objects.
+ * List only have 1 argument which is res
+ */
 ProductRouter.get('/product', (req, res) => {
     controller.list(req, res)
 })

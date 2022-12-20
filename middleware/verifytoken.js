@@ -4,6 +4,9 @@ dotenv.config()
 
 const verifyToken = (req, res, next) => {
 
+    /**
+     * If the two conditions are not fulfilled, then we use next() to move on.
+     */
     const bearerHeader = req.headers['authorization']
     if(bearerHeader) {
         const access_token = bearerHeader.substring(7)
@@ -19,9 +22,6 @@ const verifyToken = (req, res, next) => {
         res.sendStatus(401)
     }
     console.log(bearerHeader);
-
-
-
 }
 
 export default verifyToken

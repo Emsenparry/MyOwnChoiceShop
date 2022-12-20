@@ -18,6 +18,10 @@ class AuthenticateController {
 
 			bcrypt.compare(password, userdata.password, (err, result) => {
 				if(result) {
+					/**
+					 * Generates a json web token out from userdata.id and secret key
+					 * When we generate a token then we use a id
+                     */
 					const token = jwt.sign(userdata.id, process.env.PRIVATE_KEY)
 					res.json({access_token: token})
 				} else {
