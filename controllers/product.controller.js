@@ -10,7 +10,8 @@ class ProductController {
         let { limit, attributes } = req.query
         limit = parseInt(limit) || 1000
         const attr = attributes ? attributes.split(',') : new Array
-        ('id', 'img', 'name', 'content')
+        ('id', 'item_number', 'img', 'name', 'content', 'stock', 'size',
+        'price', 'gender_id', 'brand_id', 'type_id')
 
 
         const result = await ProductModel.findAll({
