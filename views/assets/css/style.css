@@ -45,19 +45,19 @@ ul li a:hover {
   margin: 0;
 }
 
-.main-footer {
+.footer-main {
   background-color: pink;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
-.main-footer p {
+.footer-main p {
   padding: 1em;
 }
-.main-footer a {
+.footer-main a {
   color: black;
   font-size: 1.3em;
   text-decoration: none;
 }
-.main-footer a:hover {
+.footer-main a:hover {
   color: white;
 }/*# sourceMappingURL=style.css.map */
