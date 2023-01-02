@@ -46,3 +46,20 @@ ul {
         }
     }
 }
+
+.main-footer{
+    background-color: pink;
+    display: flex;
+    justify-content: right;
+    p{
+        padding: 1em;
+    }
+    a{
+        color: black;
+        font-size: 1.3em;
+        text-decoration: none;
+        &:hover{
+            color: white;
+        }
+    }
+}

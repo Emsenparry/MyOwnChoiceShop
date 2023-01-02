@@ -43,4 +43,21 @@ ul li a:hover {
 }
 #products figure p {
   margin: 0;
+}
+
+.main-footer {
+  background-color: pink;
+  display: flex;
+  justify-content: right;
+}
+.main-footer p {
+  padding: 1em;
+}
+.main-footer a {
+  color: black;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+.main-footer a:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
